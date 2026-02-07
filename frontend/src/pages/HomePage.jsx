@@ -45,9 +45,7 @@ function HomePage() {
         )}
 
         {/* notes not found */}
-        {notes.length === 0 && !notes && !notes && !isRateLimited && (
-          <NoteNotFound />
-        )}
+        {notes.length === 0 && !isRateLimited && <NoteNotFound />}
 
         {/* notes */}
         {notes.length > 0 && !isRateLimited && (
