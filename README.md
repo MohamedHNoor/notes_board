@@ -1,3 +1,6 @@
+
+<img width="1437" height="771" alt="Screenshot 2026-02-07 at 9 59 08 PM" src="https://github.com/user-attachments/assets/7d2e0d73-5cb6-463b-8624-9ff510dac905" />
+
 # Note Board Full Stack Application
 - Built with the MERN Stack (MongoDB, Express, React, Node, Tailwindcss)
 - Create, Update, and Delete Notes with Title & content
