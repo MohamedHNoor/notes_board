@@ -6,6 +6,7 @@ import path from "path";
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
 import { rateLimiter } from "./middlewares/rateLimiter.js";
+import job from "./config/cron.js";
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV !== "production") {
     }),
   );
 }
+job.start();
 app.use(express.json());
 app.use(rateLimiter);
 
