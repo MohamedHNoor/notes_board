@@ -2,11 +2,11 @@ import cron from "cron";
 import https from "https";
 
 const job = new cron.CronJob("*/14 * * * *", function () {
-  https.get(process.API_URL, (res) => {
+  https.get(process.env.API_URL, (res) => {
     if (res.statusCode === 200) {
-      return console.log("Render cron job get resquest send successfully!");
+      console.log("Render cron job GET request sent successfully!");
     } else {
-      return console.log("Render cron job get resquest Failed", res.statusCode);
+      console.log("Render cron job GET request failed:", res.statusCode);
     }
   });
 });
